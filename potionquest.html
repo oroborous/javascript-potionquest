@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Endless PotionQuest</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<header>
+    Endless PotionQuest
+</header>
+<div id="content">
+    <div class="gridContainer">
+
+        <!-- Clickable chest image -->
+        <span id="chestSpan">
+            Click on the chest to open it<br>
+            <img src="img/chest.jpg" width="128" height="120" alt="Click the chest" id="chest"><br>
+        </span>
+
+        <!-- Displays current potion and Drink/Save buttons -->
+        <span id="prompt">
+            You found a <span id="potionName"></span> potion.<br/>Do you want to drink it or save it?<br/>
+            <img id="currentPotionImg"><br/>
+            <button id="drinkButton">Drink</button>
+            &nbsp;
+            <button id="saveButton">Save</button>
+        </span>
+
+    </div>
+
+    <!-- Status bars -->
+    <div>
+        <span class="bar" id="health"></span><span id="healthChange" class="change"></span><br/>
+        <span class="bar" id="magic"></span><span id="magicChange" class="change"></span><br/>
+        <span class="bar" id="size"></span><span id="sizeChange" class="change"></span>
+    </div>
+
+    <div>
+
+    </div>
+
+    <!-- Contains images of saved potions -->
+    <fieldset>
+        <legend>Backpack</legend>
+        <div id="backpack">
+
+        </div>
+    </fieldset>
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+<script>
+    // A constant for drawing the status bars
+    const PIXELS_PER_UNIT = 10;
+
+    // The hero object is global
+    var hero = {
+
+    };
+
+    // An array of potion objects
+    var potionArray = [
+        {image: "img/blue1.png", name: "Sparkling Blue", stat: "magic", mod: 5}
+    ];
+
+    // Needs to be global
+    var currentPotion;
+
+    // Clicking on the image opens the chest to reveal a potion
+    function openChest() {
+
+    }
+
+    function savePotion() {
+
+    }
+
+    function drinkPotion() {
+
+    }
+
+    function drawHero() {
+
+    }
+
+    function init() {
+        // Add the click listener to the image
+        $("#chest").click(openChest);
+
+        // Add click listener to the "Drink" button
+        $("#drinkButton").click(drinkPotion);
+
+        // Add click listener to the "Save" button
+        $("#saveButton").click(savePotion);
+
+        // Draw the initial status bars
+        drawHero();
+    }
+
+    $(init);
+
+</script>
+
+</html>

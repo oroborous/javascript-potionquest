@@ -31,6 +31,10 @@ button {
     margin-bottom: 25px;
 }
 
+.savedPotion:hover {
+    cursor: pointer;
+}
+
 button:hover {
     cursor: pointer;
 }

@@ -1,16 +1,4 @@
 $(document).ready(function () {
-    // Add the click listener to the image
-    $("#chest").click(openChest);
-
-    // Add click listener to the "Drink" button
-    $("#drinkButton").click(drinkPotion);
-
-    // Add click listener to the "Save" button
-    $("#saveButton").click(savePotion);
-
-    // Draw the initial status bars
-    drawHero();
-
     // A constant for drawing the status bars
     const PIXELS_PER_UNIT = 10;
 
@@ -59,6 +47,20 @@ $(document).ready(function () {
 
     // Needs to be global
     var currentPotion;
+
+
+    // Add the click listener to the image
+    $("#chest").click(openChest);
+
+    // Add click listener to the "Drink" button
+    $("#drinkButton").click(drinkPotion);
+
+    // Add click listener to the "Save" button
+    $("#saveButton").click(savePotion);
+
+    // Draw the initial status bars
+    drawHero();
+
 
     // Clicking on the chest image opens the chest to reveal a potion
     function openChest() {

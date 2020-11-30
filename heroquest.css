@@ -1,0 +1,14 @@
+button {
+    width: 100%;
+    height: 100%;
+}
+
+.col {
+    margin: 15px;
+}
+
+td:first-child {
+    width: 200px;
+    font-weight: bold;
+    text-align: right;
+}

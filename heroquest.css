@@ -12,3 +12,7 @@ td:first-child {
     font-weight: bold;
     text-align: right;
 }
+
+body {
+    background-color: lightblue;
+}

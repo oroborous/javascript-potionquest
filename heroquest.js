@@ -3,11 +3,19 @@ $(document).ready(function () {
 
     var hero = {
         name: "Stacy the Bold",
-        health: 50,
+        health: 42,
         maxHealth: 50,
-        magic: 25,
+        magic: 17,
         maxMagic: 25,
         backpack: [],
+        getDisplayHealth: function () {
+            var percent = Math.round(this.health / this.maxHealth * 100);
+            return `${this.health} / ${this.maxHealth} (${percent}%)`;
+        },
+        getDisplayMagic: function () {
+            var percent = Math.round(this.magic / this.maxMagic * 100);
+            return `${this.magic} / ${this.maxMagic} (${percent}%)`;
+        },
         addTreasure: function (item) {
             this.backpack.push(item);
         },
@@ -26,8 +34,11 @@ $(document).ready(function () {
     displayHero();
 
     function getTreasure() {
+        // Which button was clicked?
         var clickedButton = $(this);
 
+        // Get the text between the tags
+        // (.text() works like a getter method)
         var itemDescription = clickedButton.text();
 
         // hero.backpack.push(itemDescription);
@@ -56,9 +67,9 @@ $(document).ready(function () {
     }
 
     function displayHero() {
-        $("#heroName").text(hero.name);
-        $("#currentHealth").text(hero.health);
-        $("#currentMagic").text(hero.magic);
-        $("#backpackContents").text(hero.backpack.join(", "));
+        $("td#heroName").text(hero.name);
+        $("td#currentHealth").text(hero.getDisplayHealth());
+        $("td#currentMagic").text(hero.getDisplayMagic());
+        $("td#backpackContents").text(hero.backpack.join(", "));
     }
 });
